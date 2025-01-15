@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es-EN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotorra Argentina (Myiopsitta monachus)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container-fluid mt-4">
+    <div class="background-image"></div>
+    <div class="row">
+      <h1 class="col-12">Cotorra Argentina (Myiopsitta monachus)</h1>
+      <div class="col-12 col-md-12 col-xl-8 col-xxl-7">
+        <p>La Cotorra Argentina es una especie procedente de América del Sur que se ha reproducido masivamente en España y esto ha provocado el desplazamiento de otras especies autóctonas.</p>
+        <p>Aquí puedes encontrar la proliferación de la especie desde el <strong>año 2014 hasta el 2023</strong> en España. Si clicas en cada año podrás ver el aumento por año en las diferentes zonas de España o si prefieres clica Play y se reproducirá automáticamente. También podrás encontrar un gráfico por Comunidad Autónoma donde han sido vistos ejemplares de esta especie invasora, aunque los lugares que más se ha reproducido ha sido en <strong>Andalucía, Catalunya, Comunidad Autónoma de Madrid, Comunitat Valenciana y Región de Murcia</strong>, donde el incremento ha sido espectacular en estos últimos 10 años.</p>
+      </div>
+    </div>
+    <!-- LÍNEA DE TIEMPO -->
+    <div class="timeline row align-items-center py-3 bg-light">
+      <div class="col-12 col-md-2">
+        <!-- Botón de Play/Pause -->
+        <button id="play-pause" class="btn btn-primary">Play</button>
+      </div>
+      <div id="scroller" class="col-12 col-md-10 d-flex align-items-center justify-content-center">
+        <!-- Puntos de activación -->
+        <div class="step active" data-year="2014">2014</div>
+        <div class="step" data-year="2015">2015</div>
+        <div class="step" data-year="2016">2016</div>
+        <div class="step" data-year="2017">2017</div>
+        <div class="step" data-year="2018">2018</div>
+        <div class="step" data-year="2019">2019</div>
+        <div class="step" data-year="2020">2020</div>
+        <div class="step" data-year="2021">2021</div>
+        <div class="step" data-year="2022">2022</div>
+        <div class="step" data-year="2023">2023</div>
+      </div>
+    </div>
+
+    <!-- LEYENDA -->
+    <div class="row">
+      <div class="col-12 col-md-2 custom-legend">
+        <div class="legend-item" data-region="Andalucía">
+          <span class="color-box" style="background-color: #f6d500;"></span> Andalucía
+        </div>
+        <div class="legend-item" data-region="Aragón">
+          <span class="color-box" style="background-color: #0b91a7;"></span> Aragón
+        </div>
+        <div class="legend-item" data-region="Cantabria">
+          <span class="color-box" style="background-color: #35c223;"></span> Cantabria
+        </div>
+        <div class="legend-item" data-region="Castilla - La Mancha">
+          <span class="color-box" style="background-color: #ffc465;"></span> Castilla - La Mancha
+        </div>
+        <div class="legend-item" data-region="Castilla y León">
+          <span class="color-box" style="background-color: #00cabd;"></span> Castilla y León
+        </div>
+        <div class="legend-item" data-region="Catalunya">
+          <span class="color-box" style="background-color: #c2c100;"></span> Catalunya
+        </div>
+        <div class="legend-item" data-region="Comunidad Autónoma de Madrid">
+          <span class="color-box" style="background-color: #ba403e;"></span> Comunidad Autónoma de Madrid
+        </div>
+        <div class="legend-item" data-region="Comunidad Foral de Navarra">
+          <span class="color-box" style="background-color: #ef7f36;"></span> Comunidad Foral de Navarra
+        </div>
+        <div class="legend-item" data-region="Comunitat Valenciana">
+          <span class="color-box" style="background-color: #2d4f84;"></span> Comunitat Valenciana
+        </div>
+        <div class="legend-item" data-region="Extremadura">
+          <span class="color-box" style="background-color: #85bdf4;"></span> Extremadura
+        </div>
+        <div class="legend-item" data-region="Galicia">
+          <span class="color-box" style="background-color: #9ef1bf;"></span> Galicia
+        </div>
+        <div class="legend-item" data-region="Illes Balears">
+          <span class="color-box" style="background-color: #850193;"></span> Illes Balears
+        </div>
+        <div class="legend-item" data-region="País Vasco">
+          <span class="color-box" style="background-color: #0060e2;"></span> País Vasco
+        </div>
+        <div class="legend-item" data-region="Región de Murcia">
+          <span class="color-box" style="background-color: #e065cf;"></span> Región de Murcia
+        </div>
+      </div>
+
+
+      <!-- CONTENEDOR DE MAPAS -->
+      <!-- Se cargan todos para evitar que al pasar de uno a otro haga un salto de la imagen al cargar -->
+      <div class="col-12 col-md-10 map-container mt-2" id="map-container">
+        <iframe id="map-2014" src="https://datawrapper.dwcdn.net/C5IJG/1/" frameborder="0"  data-year="2014" class="map-frame"></iframe>
+        <iframe id="map-2015" src="https://datawrapper.dwcdn.net/KQ4Sd/1/" frameborder="0" data-year="2015" class="map-frame"></iframe>
+        <iframe id="map-2016" src="https://datawrapper.dwcdn.net/ao9oW/1/" frameborder="0" data-year="2016" class="map-frame"></iframe>
+        <iframe id="map-2017" src="https://datawrapper.dwcdn.net/qCyux/1/" frameborder="0" data-year="2017" class="map-frame"></iframe>
+        <iframe id="map-2018" src="https://datawrapper.dwcdn.net/0oSkM/1/" frameborder="0" data-year="2018" class="map-frame"></iframe>
+        <iframe id="map-2019" src="https://datawrapper.dwcdn.net/soVIV/1/" frameborder="0" data-year="2019" class="map-frame"></iframe>
+        <iframe id="map-2020" src="https://datawrapper.dwcdn.net/dUky0/1/" frameborder="0" data-year="2020" class="map-frame"></iframe>
+        <iframe id="map-2021" src="https://datawrapper.dwcdn.net/umtGO/1/" frameborder="0" data-year="2021" class="map-frame"></iframe>
+        <iframe id="map-2022" src="https://datawrapper.dwcdn.net/lBA6m/1/" frameborder="0" data-year="2022" class="map-frame"></iframe>
+        <iframe id="map-2023" src="https://datawrapper.dwcdn.net/3bksg/1/" frameborder="0" data-year="2023" class="map-frame"></iframe>
+      </div>
+      
+      <!-- CONTENEDOR GRÁFICOS COMUNIDADES -->
+      <div class="col-12 col-md-10 mt-2 d-none d-flex justify-content-center" id="region-chart-container">
+        <!-- Aquí se cargarán los gráficos relacionados -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer bg-light py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <p class="mb-0">
+          <strong>Julià Moreno Alonso</strong><br>
+          Visualització de Dades<br>
+          Màster en Ciència de Dades
+        </p>
+      </div>
+      <div>
+        <img src="logouoc.jpg" alt="Logo" class="footer-logo">
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollama"></script>
+  <script src="script.js"></script>
+</body>
+</html>

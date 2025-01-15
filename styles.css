@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fbfcfb;
+}
+
+.background-image {
+    background: url('cotorra_argentina_degradada.png') no-repeat right top;
+    background-size: auto 50%;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: -10;
+}
+
+h1 {
+  color: #aa761b;
+}
+
+.timeline {
+  background-color: transparent !important;
+}
+
+#scroller {
+  gap: 20px; /* Espaciado uniforme entre los años */
+  flex-wrap: wrap; /* Permite que los años se ajusten en múltiples líneas si es necesario */
+}
+
+.step {
+  padding: 10px 20px;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.step.active {
+  background-color: #9cb260;
+  color: white;
+  font-weight: bold;
+}
+
+.step:hover {
+  background-color: #849651;
+  border-color: #9cb260;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #9cb260;
+  border-color: #849651;
+}
+
+.btn-primary:hover {
+  background-color: #849651;
+  border-color: #9cb260;
+}
+
+.map-container {
+  width: 80%; /* Usar todo el ancho disponible */
+  height: 100vh; /* Ajustar altura para dejar espacio a la línea de tiempo */
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.map-frame {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: auto;
+  width: 80%;
+  height: 100%;
+  border: none;
+}
+
+.map-frame.active {
+  visibility: visible;
+}
+
+.custom-legend {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.legend-item:hover {
+  color: #849651;
+}
+
+.legend-item.active {
+  color: #849651;
+  font-weight: bold;
+}
+
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.footer {
+  background-color: #aa761b !important;
+  border-top: 1px solid #ead1a1; /* Línea separadora */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-logo {
+  max-width: 150px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantén la proporción del logo */
+}
+
+.footer p {
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  color: white; /* Color de texto neutro */
+}
+
+/* Media query para pantallas más pequeñas (menos de 576px) */
+@media (max-width: 768px) {
+  .custom-legend {
+    flex-flow: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+  }
+  .map-container {
+      width: 100%;
+      height: 650px;
+  }
+}
