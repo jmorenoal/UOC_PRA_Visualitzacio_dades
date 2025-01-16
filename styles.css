@@ -61,7 +61,7 @@ h1 {
 }
 
 .map-container {
-  width: 80%; /* Usar todo el ancho disponible */
+  width: 70%; /* Usar todo el ancho disponible */
   height: 100vh; /* Ajustar altura para dejar espacio a la línea de tiempo */
   display: flex;
   justify-content: center;
