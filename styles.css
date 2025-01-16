@@ -55,13 +55,15 @@ h1 {
   border-color: #849651;
 }
 
-.btn-primary:hover {
-  background-color: #849651;
-  border-color: #9cb260;
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #849651 !important;
+  border-color: #9cb260 !important;
 }
 
 .map-container {
-  width: 70%; /* Usar todo el ancho disponible */
+  width: 50%; /* Usar todo el ancho disponible */
   height: 100vh; /* Ajustar altura para dejar espacio a la línea de tiempo */
   display: flex;
   justify-content: center;
